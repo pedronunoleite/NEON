@@ -136,7 +136,7 @@ iMAE=0.053
 SIlog=4.8857
 t_GPU=0.0064
 ```
-Note: The t_GPU metric is obviously depend on the specs of computer running the experiment.
+Note: The t_GPU metric obviously depends on the specs of computer running the experiment.
 
 <ul>
   <li><p align="justify"> To retrain our model: </p></li></ul>
@@ -152,16 +152,21 @@ python3 main.py --resume [path_to_model] --epochs nr_epochs -c loss_function -b 
 python3 main.py --arch encoder_name --decoder decoder_name--epochs nr_epochs -c loss_function -b batch_size -lr learning_rate --modality modality_name
 ```
 --arch options:
+
 ['squeezenet','shufflenetv2','vgg11','densenet121','densenet121_skipadd','resnet18', 'resnet50', 'resnet18skipadd', 'resnet18skipadd_dw', 'resnet18skipconcat','mobilenet', 'mobilenetskipadd', 'mobilenetskipconcat']
 
 --decoder options:
+
 ['deconv3', 'deconv3dw', 'deconv5', 'deconv5dw', 'deconv7', 'deconv7dw', 'deconv9', 'deconv9dw', 'upconv', 'upproj', 'nnconv3', 'blconv3', 'shuffle3', 'nnconv3dw', 'blconv3dw', 'shuffle3dw', 'nnconv5', 'blconv5', 'shuffle5', 'nnconv5dw', 'blconv5dw', 'shuffle5dw', 'nnconv7', 'blconv7', 'shuffle7', 'nnconv7dw', 'blconv7dw', 'shuffle7dw', 'nnconv9', 'blconv9', 'shuffle9', 'nnconv9dw', 'blconv9dw', 'shuffle9dw']
 
 --modality options:
+
 ['rgb_flow', 'rgb_flownet', 'yuv_flow', 'rgb_flow_edges', 'yuv_flow_edges', 'rgb', 'flow', 'flownet', 'flow_edges']
 
 --loss options:
+
 ['l1', 'l2', 'custom', 'smoothl1', 'inversedepthsmoothness'] 
 
 
+## References
 
