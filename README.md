@@ -43,11 +43,11 @@ If you use this repository, please cite:
 
 <p align="justify">
 The ability to comprehend visual changes in a sequence of images can be referred to as motion perception. It plays a crucial part in autonomous systems, providing relevant
-information about the speed and direction of any moving object in a scene [7]. Additionally, information that directly translates motion can also be valuable for 3D perception.
+information about the speed and direction of any moving object in a scene [1]. Additionally, information that directly translates motion can also be valuable for 3D perception.
 </p>
 
 <p align="justify">
-This article proposes a lightweight encoder-decoder architecture, NEON (deNse dEpth from mOtioN-parallax), that exploits the notion of Motion-Parallax - objects closer to an observer are perceived to move faster than objects further away [8] - by making use of the magnitude of pixel motion in a flow field. This information is combined with texture-based features from an RGB image, to obtain a dense and accurate depth map of the scene. A visual representation of the proposed pipeline is presented in Fig.1.
+This article proposes a lightweight encoder-decoder architecture, NEON (deNse dEpth from mOtioN-parallax), that exploits the notion of Motion-Parallax - objects closer to an observer are perceived to move faster than objects further away [2] - by making use of the magnitude of pixel motion in a flow field. This information is combined with texture-based features from an RGB image, to obtain a dense and accurate depth map of the scene. A visual representation of the proposed pipeline is presented in Fig.1.
 </p>
 
 ![alt text](https://github.com/pedronunoleite/NEON/blob/main/media/visual_abstract.png)
@@ -66,7 +66,7 @@ A lightweight Convolutional Neural Network (CNN), designed to balance performanc
      A thorough study on the impact of the introduction of the motion perception features as an additional input to the network. Ablation studies indicate a significant performance gain when the Motion-Parallax effect is exploited; and reveal that the network gives more weight to the newly introduced information than to texture-based features.
     </p></li>
   <li><p align="justify"> 
-    An extensive benchmark analysis of the results obtained from evalutating NEON’s performance on Eigen’s [9] split of the KITTI dataset. Being composed of real world data, this dataset allows NEON to be tested in a multitude of scenarios, under various lighting conditions and phenomena. Finally, NEON is compared to the most relevant networks to date
+    An extensive benchmark analysis of the results obtained from evalutating NEON’s performance on Eigen’s [3] split of the KITTI dataset. Being composed of real world data, this dataset allows NEON to be tested in a multitude of scenarios, under various lighting conditions and phenomena. Finally, NEON is compared to the most relevant networks to date
    </p></li></ul>
 
 ## Architecture
@@ -112,7 +112,7 @@ All the experiments discussed within the article were run with an NVIDIA GeForce
 </p>
 
 <p align="justify"> 
-We use Eigen's [] split of the KITTI Dataset. The ground-truth is infilled by interpolating the missing depth values according to the colorization algorithm proposed by Levin et al. [39]. The optical flows are estimated with the Pytorch implementation of the Flownet2.0 [] that can be found in: https://github.com/NVIDIA/flownet2-pytorch.
+We use Eigen's [3] split of the KITTI Dataset. The ground-truth is infilled by interpolating the missing depth values according to the colorization algorithm proposed by Levin et al. [4]. The optical flows are estimated with the Pytorch implementation of the Flownet2.0 [5] that can be found in: https://github.com/NVIDIA/flownet2-pytorch.
 </p>
 
 ## Instructions
@@ -169,4 +169,14 @@ python3 main.py --arch encoder_name --decoder decoder_name--epochs nr_epochs -c 
 
 
 ## References
+<p align="justify">
+[1] A. M. Pinto, A. P. Moreira, M. V. Correia, and P. G. Costa, “A flow-based motion perception technique for an autonomous robot system,” J. Intell. Robot. Syst. Theory Appl., vol. 75, no. 3-4, pp. 475–492, 2014.
 
+[2] A. M. Pinto, “Visual motion analysis based on a robotic moving system,” Ph.D. dissertation, Faculty of Engineering of the University of Porto, FEUP, 2014. [Online]. Available: https://hdl.handle.net/10216/73552.
+
+[3] D. Eigen, C. Puhrsch, and R. Fergus, “Depth map prediction from a single image using a multi-scale deep network,” Adv. Neural Inf. Process. Syst., vol. 3, no. January, pp. 2366–2374, 2014.
+
+[4] A. Levin, D. Lischinski, and Y. Weiss, “Colorization using optimization,” ACM SIGGRAPH 2004 Pap. SIGGRAPH 2004, pp. 689–694, 2004.
+
+[5] E. Ilg, N. Mayer, T. Saikia, M. Keuper, A. Dosovitskiy, and T. Brox, “FlowNet 2.0: Evolution of optical flow estimation with deep networks,” Proc. - 30th IEEE Conf. Comput. Vis. Pattern Recognition, CVPR 2017, vol. 2017-January, pp. 1647–1655, 2017.
+</p>
