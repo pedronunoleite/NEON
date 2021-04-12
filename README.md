@@ -67,7 +67,7 @@ A lightweight Convolutional Neural Network (CNN), designed to balance performanc
      A thorough study on the impact of the introduction of the motion perception features as an additional input to the network. Ablation studies indicate a significant performance gain when the Motion-Parallax effect is exploited; and reveal that the network gives more weight to the newly introduced information than to texture-based features.
     </p></li>
   <li><p align="justify"> 
-    An extensive benchmark analysis of the results obtained from evalutating NEON’s performance on Eigen’s [3] split of the KITTI dataset. Being composed of real world data, this dataset allows NEON to be tested in a multitude of scenarios, under various lighting conditions and phenomena. Finally, NEON is compared to the most relevant networks to date
+    An extensive benchmark analysis of the results obtained from evalutating NEON’s performance on Eigen’s [3] split of the KITTI dataset. Being composed of real world data, this dataset allows NEON to be tested in a multitude of scenarios, under various lighting conditions and phenomena. Finally, NEON is compared to the most relevant networks to date.
    </p></li></ul>
 
 ## Architecture
