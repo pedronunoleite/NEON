@@ -91,8 +91,7 @@ Ablation studies demonstrate the relevance of tailoring the network to use motio
 For a thorough discussion of the experiments and results obtained with the NEON network, please refer to our article.
 </p>
 
-![alt text](https://github.com/pedronunoleite/NEON/blob/main/media/sota_comp.png)
-![alt text](https://github.com/pedronunoleite/NEON/blob/main/media/sota_comp_img.png)
+![alt text](https://github.com/pedronunoleite/NEON/blob/main/media/sota_comp.PNG)
 
 
 
