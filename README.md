@@ -94,5 +94,19 @@ For a thorough discussion of the experiments and results obtained with the NEON 
 ![alt text](https://github.com/pedronunoleite/NEON/blob/main/media/sota_comp.PNG)
 
 
+## Implementation
+
+<p align="justify"> 
+The code available in this repository has been developed with:
+</p>
+
+<ul>
+  <li><p align="justify"> CUDA 11.0 </p></li>
+  <li><p align="justify"> Pytorch 1.6.0 </p></li>
+  <li><p align="justify"> Python 3.7.9 </p></li>
+<ul>
+<p align="justify"> 
+All the experiments discussed within the article were run with an NVIDIA GeForce RTX 2080 SUPER with 8GB of VRAM, and the Intel i5-8600K CPU @ 3.60GHz with 6 cores.
+</p>
 
 
