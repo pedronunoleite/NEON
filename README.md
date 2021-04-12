@@ -180,3 +180,9 @@ python3 main.py --arch encoder_name --decoder decoder_name--epochs nr_epochs -c 
 
 [5] E. Ilg, N. Mayer, T. Saikia, M. Keuper, A. Dosovitskiy, and T. Brox, “FlowNet 2.0: Evolution of optical flow estimation with deep networks,” Proc. - 30th IEEE Conf. Comput. Vis. Pattern Recognition, CVPR 2017, vol. 2017-January, pp. 1647–1655, 2017.
 </p>
+
+The code basis for this repository has been adapted from: https://github.com/dwofk/fast-depth.
+
+The figure depicting NEON's architecture has been generated with: https://github.com/HarisIqbal88/PlotNeuralNet.
+
+The number of MAC and floating point operations have been estimated with: https://github.com/sovrasov/flops-counter.pytorch.
