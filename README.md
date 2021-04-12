@@ -104,9 +104,15 @@ The code available in this repository has been developed with:
   <li><p align="justify"> CUDA 11.0 </p></li>
   <li><p align="justify"> Pytorch 1.6.0 </p></li>
   <li><p align="justify"> Python 3.7.9 </p></li>
-<ul>
+</ul>
 <p align="justify"> 
 All the experiments discussed within the article were run with an NVIDIA GeForce RTX 2080 SUPER with 8GB of VRAM, and the Intel i5-8600K CPU @ 3.60GHz with 6 cores.
 </p>
 
+<p align="justify"> 
+We use Eigen's [] split of the KITTI Dataset. The ground-truth is infilled by interpolating the missing depth values according to the colorization algorithm proposed by Levin et al. [39]. 
+</p>
 
+<p align="justify"> 
+The optical flows are estimated with the Pytorch implementation of the Flownet2.0 [] that can be found in: https://github.com/NVIDIA/flownet2-pytorch
+</p>
