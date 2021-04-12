@@ -7,13 +7,8 @@ This article introduces a lightweight Convolutional Neural Network (CNN) for dep
 Instead of solely focusing on visual features, the proposed methodology exploits the Motion-Parallax effect to combine the apparent motion of pixels with texture. 
 This research demonstrates that motion perception provides crucial insight about the magnitude of movement for each pixel, which also encodes cues about depth since large displacements usually occur when objects are closer to the imaging sensor. 
 </p>
-<p align="justify">
-NEON’s performance is compared to relevant networks in terms of Root Mean Squared Error (RMSE), the percentage of correctly predicted pixels (δ1) and inference times, using the KITTI dataset. Experiments prove that NEON is significantly more efficient than the current top ranked network, estimating predictions 12 times faster; while achieving an average RMSE of 3.118 m and a δ1 of 94.5%. Ablation studies demonstrate the relevance of tailoring the network to use motion perception principles in estimating depth from image
-sequences, considering that the effectiveness and quality of the estimated depth map is similar to more computational demanding state-of-the-art networks. 
-</p>
 
 If you use this repository, please cite:
-</p>
 ```
 //TODO
 @article{
@@ -29,6 +24,17 @@ If you use this repository, please cite:
   year = {}
 }
 ```
+## Table of Contents
+
+[***Contributions***](https://github.com/pedronunoleite/NEON#Contributions)
+[***Architecture***](https://github.com/pedronunoleite/NEON#Architecture)
+[***Results***](https://github.com/pedronunoleite/NEON#Results)
+[***Implementation***](https://github.com/pedronunoleite/NEON#Implementation)
+[***References***](https://github.com/pedronunoleite/NEON#References)
+
+
+## Contributions
+
 <p align="justify">
 The ability to comprehend visual changes in a sequence of images can be referred to as motion perception. It plays a crucial part in autonomous systems, providing relevant
 information about the speed and direction of any moving object in a scene [7]. Additionally, information that directly translates motion can also be valuable for 3D perception.
@@ -57,3 +63,14 @@ A lightweight Convolutional Neural Network (CNN), designed to balance performanc
     An extensive benchmark analysis of the results obtained from evalutating NEON’s performance on Eigen’s [9] split of the KITTI dataset. Being composed of real world data, this dataset allows NEON to be tested in a multitude of scenarios, under various lighting conditions and phenomena. Finally, NEON is compared to the most relevant networks to date
    </p></li>
   
+## Architecture
+<p align="justify"> 
+The proposed network is based on an encoder-decoder structure. The encoder is responsible for extracting high-level characteristics from the input. These become a set of low-resolution feature maps that need to be merged and upsampled, so that the network is able to output a dense and full resolution depth map.  
+</p>
+
+<p align="justify">  
+The encoder is composed of a ResNet18 followed by a 1x1 convolutional layer that asserts the number of channels to the decoder, which is comprised of five upsampling layers, each followed by a bilinear interpolation with a scale factor of two. Skip additive connections are implemented between both. Feature maps are presented as Channels x Height x Width.
+
+![alt text](https://github.com/pedronunoleite/NEON/blob/main/media/neon_arch.png)
+
+
