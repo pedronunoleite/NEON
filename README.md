@@ -38,6 +38,7 @@ If you use this repository, please cite:
 
 [***References***](https://github.com/pedronunoleite/NEON#References)
 
+[***Contact***](https://github.com/pedronunoleite/NEON#Contact)
 
 ## Contributions
 
@@ -186,3 +187,8 @@ The code basis for this repository has been adapted from: https://github.com/dwo
 The figure depicting NEON's architecture has been generated with: https://github.com/HarisIqbal88/PlotNeuralNet.
 
 The number of MAC and floating point operations have been estimated with: https://github.com/sovrasov/flops-counter.pytorch.
+
+Data augmentation was conducted with: https://github.com/albumentations-team/albumentations.
+
+## Contact
+If you have any inquiry about this work please email me at: pedro.nuno@inesctec.pt
