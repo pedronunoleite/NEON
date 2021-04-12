@@ -34,6 +34,8 @@ If you use this repository, please cite:
 
 [***Implementation***](https://github.com/pedronunoleite/NEON#Implementation)
 
+[***Instructions***](https://github.com/pedronunoleite/NEON#Instructions)
+
 [***References***](https://github.com/pedronunoleite/NEON#References)
 
 
@@ -110,9 +112,28 @@ All the experiments discussed within the article were run with an NVIDIA GeForce
 </p>
 
 <p align="justify"> 
-We use Eigen's [] split of the KITTI Dataset. The ground-truth is infilled by interpolating the missing depth values according to the colorization algorithm proposed by Levin et al. [39]. 
+We use Eigen's [] split of the KITTI Dataset. The ground-truth is infilled by interpolating the missing depth values according to the colorization algorithm proposed by Levin et al. [39]. The optical flows are estimated with the Pytorch implementation of the Flownet2.0 [] that can be found in: https://github.com/NVIDIA/flownet2-pytorch.
 </p>
 
-<p align="justify"> 
-The optical flows are estimated with the Pytorch implementation of the Flownet2.0 [] that can be found in: https://github.com/NVIDIA/flownet2-pytorch
-</p>
+## Instructions
+<ul>
+  <li><p align="justify"> Reproduce the resuls presented in the paper: </p><li></ul>
+  
+```
+python3 main.py --evaluate [path_to_model]
+```
+This should be the output:
+
+```
+*
+RMSE=3.118
+MAE=1.324
+Delta1=0.945
+REL=0.064
+Lg10=0.027
+iRMSE=10.397
+iMAE=0.053
+SIlog=4.8857
+t_GPU=0.0064
+```
+Note: The t_GPU metric is obviously depend on the specs of computer running the experiment.
