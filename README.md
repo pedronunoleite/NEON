@@ -123,6 +123,7 @@ We use Eigen's [3] split of the KITTI Dataset. The ground-truth is infilled by i
 ```
 python3 main.py --evaluate [path_to_model]
 ```
+The path to our model can be found in: https://drive.google.com/file/d/1eiL3qJ3g8AhebnBj9N3DL4Vr5rV-pKXG/view?usp=sharing.
 This should be the output:
 
 ```
