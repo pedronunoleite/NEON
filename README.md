@@ -118,7 +118,7 @@ We use Eigen's [3] split of the KITTI Dataset. The ground-truth is infilled by i
 
 ## Instructions
 <ul>
-  <li><p align="justify"> Reproduce the resuls presented in the paper: </p></li></ul>
+  <li><p align="justify"> Reproduce the results presented in the paper: </p></li></ul>
   
 ```
 python3 main.py --evaluate [path_to_model]
