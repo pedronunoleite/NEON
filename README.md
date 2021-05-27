@@ -19,7 +19,7 @@ If you use this repository, please cite:
   volume={9},
   number={},
   pages={76056-76068},
-  doi={10.1109/ACCESS.2021.3082697}}```
+  doi={10.1109/ACCESS.2021.3082697}}
 
 ```
 ## Table of Contents
