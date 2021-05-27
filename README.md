@@ -10,19 +10,17 @@ This research demonstrates that motion perception provides crucial insight about
 
 If you use this repository, please cite:
 ```
-//TODO
-@article{
-  author = {}
-  doi = {},
-  journal = {},
-  month = {},
-  number = {},
-  pages = {},
-  title = {},
-  url = {}
-  volume = {},
-  year = {}
-}
+
+@ARTICLE{9438671,
+  author={Leite, Pedro Nuno and Pinto, Andry Maykol},
+  journal={IEEE Access}, 
+  title={Exploiting Motion Perception in Depth Estimation Through a Lightweight Convolutional Neural Network}, 
+  year={2021},
+  volume={9},
+  number={},
+  pages={76056-76068},
+  doi={10.1109/ACCESS.2021.3082697}}```
+
 ```
 ## Table of Contents
 
